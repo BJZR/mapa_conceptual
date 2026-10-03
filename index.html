@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nexus</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+  <strong>Nexus</strong>
+  <button class="main" data-do="add">Concepto</button>
+  <button data-do="layout">Organizar</button>
+  <button data-do="undo">Deshacer</button>
+  <button data-do="redo">Rehacer</button>
+  <i></i>
+  <button data-do="open">Abrir</button>
+  <button data-do="json">Guardar</button>
+  <button data-do="png">PNG</button>
+  <button data-do="wipe">Vaciar</button>
+</nav>
+<main id="stage">
+  <div id="world">
+    <svg>
+      <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 1L9 5L0 9z"/></marker></defs>
+      <g id="links"></g><path id="temp"/>
+    </svg>
+    <div id="nodes"></div>
+  </div>
+  <div id="hint">Doble clic: concepto. Tab: hijo a la derecha. Mayús+Tab: a la izquierda. L: organizar. Supr: borrar. Doble clic en línea: desconectar.</div>
+  <div id="hud">
+    <button data-do="zout">−</button><span id="zoom">100%</span><button data-do="zin">+</button><button data-do="fit">Ajustar</button>
+  </div>
+</main>
+<input id="file" type="file" accept=".json" hidden>
+<script src="js/state.js"></script>
+<script src="js/camera.js"></script>
+<script src="js/links.js"></script>
+<script src="js/nodes.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/io.js"></script>
+<script src="js/input.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
